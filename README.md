@@ -14,7 +14,8 @@ To develop a neural network regression model for the given dataset.
 
 ## Neural Network Model
 
-<img height=10% width=30% src ="https://github.com/user-attachments/assets/8da4c1b3-21da-49c2-8b12-44bc1fab22f2">
+
+
 ## DESIGN STEPS
 ### STEP 1:
 Loading the dataset
@@ -35,6 +36,7 @@ Evaluate the model with the testing data.
 DEVELOPED BY : DEEPIKA S
 REGISTER NUMBER : 212222230028
 ```
+
 ## Importing Required packages
 ```py
 from google.colab import auth
@@ -47,6 +49,7 @@ import pandas as pd
 from google.auth import default
 import pandas as pd
 ```
+
 ## Authenticate the Google sheet
 ```py
 auth.authenticate_user()
@@ -69,6 +72,7 @@ Scaler = MinMaxScaler()
 Scaler.fit(x_train)
 X_train1 = Scaler.transform(x_train)
 ```
+
 ## Build the Deep learning Model
 ```py
 ai_brain=Sequential([
@@ -82,6 +86,7 @@ ai_brain.fit(X_train1,y_train.astype(np.float32),epochs=2000)
 loss_df = pd.DataFrame(ai_brain.history.history)
 loss_df.plot()
 ```
+
 ## Evaluate the Model
 ```py
 test=Scaler.transform(x_test)
@@ -91,21 +96,13 @@ n1_1=Scaler.transform(n1)
 ai_brain.predict(n1_1)
 ```
 ## Dataset Information
-
-<img height=50% width=30% src ="https://github.com/user-attachments/assets/5b40d825-7d79-4ee4-9009-b6c5ad55429">
-
+![dataset1](https://github.com/user-attachments/assets/acb50f99-c29f-48bc-af25-9cd189e1ee42)
 ## OUTPUT
-
 ## Training Loss Vs Iteration Plot
-<img height=10% width=30% src ="https://github.com/user-attachments/assets/49f934a3-bb98-430f-acbf-3f33343e7e22">
-
+![dataset2](https://github.com/user-attachments/assets/3cdf42dd-9b3c-4b79-84f6-a031898a72be)
 ## Test Data Root Mean Squared Error
-
-<img height=10% width=30% src ="https://github.com/user-attachments/assets/8bf23390-1cef-4d5a-878b-1dfabf5e0069">
-
+![dataset3](https://github.com/user-attachments/assets/f76d458f-c816-44b2-ba40-ec0e93f3163f)
 ## New Sample Data Prediction
-
-<img height=10% width=30% src ="https://github.com/user-attachments/assets/e33e6792-1013-47b4-8e8e-c6c575922d89">
-
+![dataset4](https://github.com/user-attachments/assets/59e62613-f968-4b83-8f79-ad0d4f68436e)
 ## RESULT
 Thus a Neural network for Regression model is Implemented
