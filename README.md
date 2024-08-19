@@ -51,11 +51,12 @@ worksheet = gc.open('Data').sheet1
 ```
 ## Construct Data frame using Rows and columns
 ```py
-rows = worksheet.get_all_values()
-df = pd.DataFrame(rows[1:], columns=rows[0])
-df.head()
-X=df[['Input']].values
-Y=df[['Output']].values
+dataset1=pd.DataFrame(data[1:], columns=data[0])
+dataset1=dataset1.astype({'x':'float'})
+dataset1=dataset1.astype({'y':'float'})
+dataset1.head(20)
+X=df[['x']].values
+Y=df[['y']].values
 ```
 ## Split the testing and training data
 ```py
@@ -68,8 +69,8 @@ X_train1 = Scaler.transform(x_train)
 ## Build the Deep learning Model
 ```py
 ai_brain=Sequential([
-    Dense(9,activation = 'relu',input_shape=[1]),
-    Dense(16,activation = 'relu'),
+    Dense(8,activation = 'relu',input_shape=[1]),
+    Dense(10,activation = 'relu'),
     Dense(1)
 ])
 ai_brain.compile(optimizer='adam',loss='mse')
@@ -81,11 +82,11 @@ loss_df.plot()
 
 ## Evaluate the Model
 ```py
-test=Scaler.transform(x_test)
-ai_brain.evaluate(test,y_test.astype(np.float32))
-n1=[[19]]
-n1_1=Scaler.transform(n1)
-ai_brain.predict(n1_1)
+X_test1=Scaler.transform(X_test)
+ai_brain.evaluate(X_test1,y_test)
+X_n1=[[19]]
+X_n1_1 = Scaler.transform(X_n1)
+ai_brain.predict(X_n1_1)
 ```
 ## Dataset Information
 ![dataset1](https://github.com/user-attachments/assets/acb50f99-c29f-48bc-af25-9cd189e1ee42)
