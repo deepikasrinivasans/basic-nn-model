@@ -45,9 +45,10 @@ import pandas as pd
 ## Authenticate the Google sheet
 ```py
 auth.authenticate_user()
-creds, _ = default()
-gc = gspread.authorize(creds)
-worksheet = gc.open('Data').sheet1
+creds,_=default()
+gc=gspread.authorize(creds)
+worksheet = gc.open('Mydata').sheet1
+data = worksheet.get_all_values()
 ```
 ## Construct Data frame using Rows and columns
 ```py
@@ -60,12 +61,11 @@ Y=df[['y']].values
 ```
 ## Split the testing and training data
 ```py
-x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.5,random_state=40)
+X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.33,random_state=33)
 Scaler = MinMaxScaler()
-Scaler.fit(x_train)
-X_train1 = Scaler.transform(x_train)
+Scaler.fit(X_train)
+X_train1=Scaler.transform(X_train)
 ```
-
 ## Build the Deep learning Model
 ```py
 ai_brain=Sequential([
