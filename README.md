@@ -72,7 +72,7 @@ ai_brain=Sequential([
     Dense(10,activation = 'relu'),
     Dense(1)
 ])
-ai_brain.compile(optimizer='adam',loss='mse')
+ai_brain.compile(optimizer = 'rmsprop', loss = 'mse')
 ai_brain.fit(X_train1,y_train.astype(np.float32),epochs=2000)
 
 loss_df = pd.DataFrame(ai_brain.history.history)
