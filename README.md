@@ -1,4 +1,4 @@
-# EX-1 Developing a Neural Network Regression Model
+![new1](https://github.com/user-attachments/assets/20dac94a-98eb-4cb2-b0ec-fe337b996654)# EX-1 Developing a Neural Network Regression Model
 
 ## AIM
 
@@ -94,8 +94,10 @@ ai_brain.predict(X_n1_1)
 ## Training Loss Vs Iteration Plot
 ![dataset2](https://github.com/user-attachments/assets/3cdf42dd-9b3c-4b79-84f6-a031898a72be)
 ## Test Data Root Mean Squared Error
+![new1](https://github.com/user-attachments/assets/a7192941-6e51-4eba-b2a5-c5e3d545eb36)
 ![dataset3](https://github.com/user-attachments/assets/f76d458f-c816-44b2-ba40-ec0e93f3163f)
 ## New Sample Data Prediction
-![dataset4](https://github.com/user-attachments/assets/59e62613-f968-4b83-8f79-ad0d4f68436e)
+![new2](https://github.com/user-attachments/assets/ef3babf6-01a7-4ad3-8a64-4289449cb55f)
+
 ## RESULT
 Thus a Neural network for Regression model is Implemented
