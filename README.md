@@ -6,7 +6,7 @@ To develop a neural network regression model for the given dataset.
 
 ## THEORY
 
-1) Developing a Neural Network Regression Model AIM To develop a neural network regression model for the given dataset. THEORY Neural networks consist of simple input/output units called neurons (inspired by neurons of the human brain). These input/output units are interconnected and each connection has a weight associated with it.
+1) Neural networks consist of simple input/output units called neurons (inspired by neurons of the human brain). These input/output units are interconnected and each connection has a weight associated with it.
 
 2) Regression helps in establishing a relationship between a dependent variable and one or more independent variables. Regression models work well only when the regression equation is a good fit for the data. Most regression models will not fit the data perfectly.
 
@@ -90,7 +90,7 @@ loss_df.plot()
 ```py
 test=Scaler.transform(x_test)
 ai_brain.evaluate(test,y_test.astype(np.float32))
-n1=[[40]]
+n1=[[19]]
 n1_1=Scaler.transform(n1)
 ai_brain.predict(n1_1)
 ```
