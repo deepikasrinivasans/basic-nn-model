@@ -1,5 +1,4 @@
-![new1](https://github.com/user-attachments/assets/20dac94a-98eb-4cb2-b0ec-fe337b996654)# EX-1 Developing a Neural Network Regression Model
-
+# EX-01 Developing a Neural Network Regression Model
 ## AIM
 
 To develop a neural network regression model for the given dataset.
